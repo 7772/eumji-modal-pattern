@@ -6,11 +6,11 @@ import FirstModal from "./components/modals/FirstModal";
 import SecondModal from "./components/modals/SecondModal";
 import ThirdModal from "./components/modals/ThirdModal";
 
-const getModal = (modal, close) => {
+const getModal = (modal, closeModal) => {
   const modals = {
-    firstModal: <FirstModal close={close} />,
-    secondModal: <SecondModal close={close} />,
-    thirdModal: <ThirdModal close={close} />,
+    firstModal: <FirstModal closeModal={closeModal} />,
+    secondModal: <SecondModal closeModal={closeModal} />,
+    thirdModal: <ThirdModal closeModal={closeModal} />,
   };
   return modals[modal];
 };
@@ -20,8 +20,8 @@ export default function withModal(WrappedComponent) {
     constructor(props) {
       super(props);
 
-      this.show = this.show.bind(this);
-      this.close = this.close.bind(this);
+      this.showModal = this.showModal.bind(this);
+      this.closeModal = this.closeModal.bind(this);
       this.retrieveModal = this.retrieveModal.bind(this);
 
       this.state = {
@@ -33,7 +33,7 @@ export default function withModal(WrappedComponent) {
       };
     }
 
-    show(modal) {
+    showModal(modal) {
       this.setState({ 
         isVisible: {
           [modal]: true
@@ -41,7 +41,7 @@ export default function withModal(WrappedComponent) {
       });
     }
 
-    close(modal) {
+    closeModal(modal) {
       this.setState({ 
         isVisible: {
           [modal]: false
@@ -54,7 +54,7 @@ export default function withModal(WrappedComponent) {
       if (!isVisible.hasOwnProperty(modal)) return;
       return (
         <Modal key={index} isVisible={isVisible[modal]}>
-          {getModal(modal, this.close)}
+          {getModal(modal, this.closeModal)}
         </Modal> 
       );
     }
@@ -70,8 +70,8 @@ export default function withModal(WrappedComponent) {
       return (
         <WrappedComponent 
           {...this.props} 
-          show={this.show} 
-          close={this.close} 
+          showModal={this.showModal} 
+          closeModal={this.closeModal} 
           retrieveModal={this.retrieveModal} 
         />
       );

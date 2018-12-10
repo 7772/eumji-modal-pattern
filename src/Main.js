@@ -12,7 +12,7 @@ class Main extends Component {
   }
 
   onPress(key) {
-    this.props.show(key);
+    this.props.showModal(key);
   }
 
   render() {

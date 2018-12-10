@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default FirstModal = ({ close }) => {
+export default FirstModal = ({ closeModal }) => {
   return (
     <View style={styles.modal}>
       <TouchableOpacity 
         style={styles.close}
-        onPress={close}
+        onPress={closeModal}
       >
         <Text>Close Modal</Text>
       </TouchableOpacity>
