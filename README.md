@@ -30,6 +30,7 @@ this.state = {
     isVisibleModalFour: false,
     ...    
 };
+```
 
 3. You may use duplicate code to handle modals inside each file that needs modal.
 ```
