@@ -42,7 +42,6 @@ export default function withModal(WrappedComponent) {
     }
 
     closeModal(modal) {
-      console.log("close modal", modal);
       this.setState({ 
         isVisible: {
           [modal]: false
