@@ -1,4 +1,4 @@
-# The Best Practice of Modal In React Native
+# Eumji Modal Pattern: The Best Practice of Modal In React Native
 
 ***Proposal*** for nice developer experience when using modal in React Native.
 
