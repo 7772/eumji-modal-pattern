@@ -6,7 +6,7 @@ export default ThirdModal = ({ closeModal }) => {
     <View style={styles.modal}>
       <TouchableOpacity 
         style={styles.close}
-        onPress={closeModal}
+        onPress={() => closeModal("thirdModal")}
       >
         <Text>Close Modal</Text>
       </TouchableOpacity>

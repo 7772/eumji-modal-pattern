@@ -6,7 +6,7 @@ export default SecondModal = ({ closeModal }) => {
     <View style={styles.modal}>
       <TouchableOpacity 
         style={styles.close}
-        onPress={closeModal}
+        onPress={() => closeModal("secondModal")}
       >
         <Text>Close Modal</Text>
       </TouchableOpacity>

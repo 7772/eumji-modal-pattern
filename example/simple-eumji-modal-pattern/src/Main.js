@@ -16,7 +16,7 @@ class Main extends Component {
   }
 
   render() {
-    const modals = ["firstModal", "secondModal", "thirdModal", "fourthModal"];
+    const modals = ["firstModal", "secondModal", "thirdModal"];
     return (
       <View style={styles.container}>
         <TouchableOpacity 
