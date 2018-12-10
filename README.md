@@ -10,16 +10,17 @@ The name, **Eumji Modal Pattern**.
 
 Modal make the messy. - Galahad in kingsman (maybe).
 
-Please read [problems]().
+Please read [problems](https://github.com/7772/eumji-modal-pattern/blob/master/docs/problems.md).
 
 ---
 
 ## The Proposal
 
 **Just Add 3 lines code in your client side that needs modals.**
+
 **We are No Messy, No State, No Duplicate.**
 
-**How?**
+
 
 **1. Array variable that contains the name of Modals**
 
@@ -56,7 +57,7 @@ export default withModal(YourComponent);
 
 ---
 
-## Example
+## How To Use
 
 **! IMPORTANCE**
 
@@ -66,7 +67,8 @@ If you do not want to use `react-native-modal`, You have to update the name of v
 
 **1. Make Modal Component**
 
-We will define Modal Component, (<Modal ...>) in withModal.js
+We will define Modal Component, (<Modal ...>) in `withModal.js`.
+
 So, Just make only View Component.
 
 We Must name `FooModal` by appending `Modal` as postfix.
@@ -179,7 +181,7 @@ export default function withModal(WrappedComponent) {
 }
 ```
 
-#### How to open Modal
+### How to open Modal
 
 Make sure that use `fooModal` as key if you want to open `<FooModal />`;
 
@@ -189,7 +191,7 @@ Make sure that use `fooModal` as key if you want to open `<FooModal />`;
 this.props.showModal("fooModal");
 ```
 
-#### How to close Modal
+### How to close Modal
 
 **1. If you want to close Modal in YourComponent.js**
 
@@ -222,7 +224,7 @@ export default FooModal = ({ closeModal }) => {
 };
 ```
 
-#### Things To Do To Add New Modal
+### Things To Do To Add New Modal
 
 **1. Make Modal Component.**
 
@@ -269,7 +271,7 @@ this.state = {
 };
 ```
 
-**5. Add elements (`newModal`) in Array in YourComponent.js**
+**5. Add elements (`newModal`) in Array in `YourComponent.js`**
 
 ```
 render() {
@@ -284,7 +286,7 @@ render() {
 
 ### Examples
 
-- [simple-eumji-modal-pattern]() - Implementation of the Eumji Modal Pattern. With this example you can right apply eumji-modal-pattern in your project.
+- [simple-eumji-modal-pattern](https://github.com/7772/eumji-modal-pattern/tree/master/example/simple-eumji-modal-pattern) - Implementation of the Eumji Modal Pattern. With this example you can right apply eumji-modal-pattern in your project.
 
 ---
 
@@ -296,7 +298,7 @@ Please Submit any feedback via issue.
 
 Thanks!
 
--- Landon
+-- 7772
 
 
 
