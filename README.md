@@ -104,7 +104,7 @@ import Modal from "react-native-modal";
 
 import FirstModal from "./FirstModal";
 import SecondModal from "./SecondModal";
-import ThirdeModal from "./ThirdeModal";
+import ThirdModal from "./ThirdModal";
 
 const getModal = (modal, closeModal) => {
   const modals = {
