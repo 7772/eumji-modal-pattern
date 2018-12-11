@@ -18,7 +18,7 @@ Please read [problems](https://github.com/7772/eumji-modal-pattern/blob/master/d
 
 **Just Add 3 lines code in your client side that needs modals.**
 
-**We are No Messy, No State, No Duplicate.**
+**We are No Mess, No State, No Duplicate.**
 
 
 
