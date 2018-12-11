@@ -24,7 +24,7 @@ Please read [problems](https://github.com/7772/eumji-modal-pattern/blob/master/d
 
 **1. Array variable that contains the name of Modals**
 
-We Must name `modals`.
+We will name the variable as `modals`.
 
 ```
 const modals = ["firstModal", "secondModal", "thirdModal"];
@@ -32,7 +32,7 @@ const modals = ["firstModal", "secondModal", "thirdModal"];
 
 **2. Call function with modals in the render function.**
 
-We Must name `retrieveModal`.
+We will name the function as `retrieveModal`.
 
 ```
 // In YourComponent.js
@@ -49,7 +49,7 @@ render() {
 
 **3. Export component with Higher Order Function**
 
-We Must name `withModal`.
+We will name the component as `withModal`.
 
 ```
 export default withModal(YourComponent);
@@ -71,7 +71,7 @@ We will define Modal Component, (<Modal ...>) in `withModal.js`.
 
 So, Just make only View Component.
 
-We Must name `FooModal` by appending `Modal` as postfix.
+We will name the component as `FooModal` by appending `Modal` as postfix.
 
 ```
 // FirstModal.js
@@ -95,7 +95,7 @@ export default FirstModal = ({ closeModal }) => {
 
 **2. Make Modal Handler Using Higher Order Function with getModal function.**
 
-We Must name `withModal.js`.
+We will name the component as `withModal.js`.
 
 ```
 // withModal.js
@@ -292,7 +292,7 @@ render() {
 
 ### Implementation
 
-Althogh Eumji Modal Pattern has some tasks, it will make your client side code very clean. I think that this pattern helps developer experience to be enhanced.
+Although Eumji Modal Pattern has some tasks, it will make your client side code very clean. I think that this pattern helps developer experience to be enhanced.
 
 Please Submit any feedback via issue.
 
