@@ -61,4 +61,5 @@ showModal() {
 
 **4. Redux or something ?**
 
-Althogh You may aleady use *Redux* or *something* to avoid these shortcommings, It is difficult to dodge all of above.
+Although You may already use Redux or something to avoid these shortcomings, It is difficult to dodge all of above.
+
