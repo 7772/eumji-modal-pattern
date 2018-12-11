@@ -8,7 +8,7 @@ The name, **Eumji Modal Pattern**.
 
 ## Why need Eumji Modal Pattern?
 
-Modal make the messy. - Galahad in kingsman (maybe).
+Modals make the messy. - Galahad in kingsman (maybe).
 
 Please read [problems](https://github.com/7772/eumji-modal-pattern/blob/master/docs/problems.md).
 
