@@ -8,17 +8,7 @@ import ThirdModal from "./components/modals/ThirdModal";
 import {withModal} from "./withModal";
  
 class Main extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.onPress = this.onPress.bind(this);
-  }
-
-  onPress(key) {
-    this.props.showModal(key);
-  }
-
+  
   sayHello() {
     alert("Hello");
   }
@@ -33,19 +23,19 @@ class Main extends Component {
       <View style={styles.container}>
         <TouchableOpacity 
           style={styles.button}
-          onPress={() => this.onPress("firstModal")}
+          onPress={() => this.props.showModal("firstModal")}
         >
           <Text>Open First Modal</Text>
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.button} 
-          onPress={() => this.onPress("secondModal")}
+          onPress={() => this.props.showModal("secondModal")}
         >
           <Text>Open Second Modal</Text>
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.button} 
-          onPress={() => this.onPress("thirdModal")}
+          onPress={() => this.props.showModal("thirdModal")}
         >
           <Text>Open Third Modal</Text>
         </TouchableOpacity>
