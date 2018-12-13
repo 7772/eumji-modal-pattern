@@ -1,19 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Modal from "react-native-modal";
 
-export default SecondModal = ({ closeModal }) => {
+export default SecondModal = ({ isVisible, closeModal, ...otherProps }) => {
   return (
-    <View style={styles.modal}>
-      <TouchableOpacity 
-        style={styles.close}
-        onPress={() => closeModal("secondModal")}
-      >
-        <Text>Close Modal</Text>
-      </TouchableOpacity>
-      <View style={styles.main}>
-        <Text>SecondModal</Text>
+    <Modal isVisible={isVisible}>
+      <View style={styles.modal}>
+        <TouchableOpacity 
+          style={styles.close}
+          onPress={() => closeModal("secondModal")}
+        >
+          <Text>Close Modal</Text>
+        </TouchableOpacity>
+        <View style={styles.main}>
+          <Text>SecondModal</Text>
+        </View>
       </View>
-    </View>
+    </Modal>
   );
 };
 

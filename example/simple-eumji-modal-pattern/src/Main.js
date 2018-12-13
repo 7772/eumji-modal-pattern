@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-import withModal from "./withModal";
+import FirstModal from "./components/modals/FirstModal";
+import SecondModal from "./components/modals/SecondModal";
+import ThirdModal from "./components/modals/ThirdModal";
+
+import {withModal} from "./withModal";
  
 class Main extends Component {
 
@@ -15,8 +19,16 @@ class Main extends Component {
     this.props.showModal(key);
   }
 
+  sayHello() {
+    alert("Hello");
+  }
+
   render() {
-    const modals = ["firstModal", "secondModal", "thirdModal"];
+    const modals = {
+      firstModal: <FirstModal sayHello={this.sayHello} />,
+      secondModal: <SecondModal />,
+      thirdModal: <ThirdModal />,
+    };
     return (
       <View style={styles.container}>
         <TouchableOpacity 
@@ -37,12 +49,12 @@ class Main extends Component {
         >
           <Text>Open Third Modal</Text>
         </TouchableOpacity>
-        {this.props.retrieveModal(modals)}
+        {this.props.renderModal(modals)}
       </View>
     )
   }
 }
- 
+
 export default withModal(Main);
 
 const styles = StyleSheet.create({
