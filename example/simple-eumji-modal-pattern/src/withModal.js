@@ -7,10 +7,10 @@ export const withModal = (WrappedComponent) => {
       super(props);
 
       this.isVisible = null;
-      
+
       this._getModal = this._getModal.bind(this);
-      this._makeIsVisible = this._makeIsVisible.bind(this);
       this._setIsVisible = this._setIsVisible.bind(this);
+      this._setState = this._setState.bind(this);
       this._initState = this._initState.bind(this);
 
       this.renderModal = this.renderModal.bind(this);
@@ -24,7 +24,7 @@ export const withModal = (WrappedComponent) => {
     }
 
     componentDidMount() {
-      this._setIsVisible();
+      this._setState();
     }
 
     componentWillUnmount() {
@@ -38,14 +38,14 @@ export const withModal = (WrappedComponent) => {
       });
     }
 
-    _setIsVisible() {
+    _setState() {
       this.setState({
         isVisible: this.isVisible, 
         isMounted: true
       });
     }
 
-    _makeIsVisible(modals) {
+    _setIsVisible(modals) {
       let isVisible = {};
       for (key in modals) {
         isVisible[key] = false;
@@ -87,12 +87,12 @@ export const withModal = (WrappedComponent) => {
 
     renderModal(modals) {
       if (typeof modals !== "object") return;
+      this._setIsVisible(modals);
 
-      this._makeIsVisible(modals);
-      
       if (!this.state.isMounted) return;
-      
-      return this._getModal(modals);
+      const modalsComponent = this._getModal(modals);
+
+      return modalsComponent;
     }
 
     render() {
